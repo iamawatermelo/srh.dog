@@ -162,15 +162,26 @@
     }
     
     ol {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        
         margin: 0;
         padding: 0;
         list-style-type: none;
         counter-reset: list 0;
         
         li {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-column: 1 / 3;
             counter-increment: list 1;
             
+            > * {
+                grid-column: 2;
+            }
+            
             &::before {
+                grid-column: 1;
                 opacity: 0.6;
                 content: counter(list) ":";
                 padding-left: 2ex;
