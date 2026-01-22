@@ -27,9 +27,16 @@ html {
     font-family: 'Inter Variable', 'Inter', system-ui, sans-serif;
     background: #f2f0f2;
     color: #0f0f0f;
+    --inverse: #f2f0f2;
     
     @media (prefers-color-scheme: dark) {
         background: #1f0f1f;
         color: #f0f0f0;
+        --inverse: #1f0f1f;
     }
+}
+
+::selection {
+    background: color-mix(in srgb, var(--accent), transparent 10%);
+    color: var(--inverse);
 }
