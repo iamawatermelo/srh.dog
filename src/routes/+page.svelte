@@ -121,7 +121,7 @@
             display: inline-block;
             text-decoration: none;
             transition: transform 100ms;
-            padding-left: 1ex;
+            padding-left: 1ch;
             content: "->"
         }
         
@@ -203,8 +203,8 @@
                 grid-column: 1;
                 opacity: 0.6;
                 content: counter(list) ":";
-                padding-left: 2ex;
-                padding-right: 1ex;
+                padding-left: 2ch;
+                padding-right: 1ch;
             }
         }
     }
