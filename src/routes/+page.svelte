@@ -3,7 +3,7 @@
 </script>
 
 <main>
-    <div class="prelude" role="presentation">
+    <div class="prelude" aria-hidden="true" role="presentation">
         <Logo class="logo" />
 
         <div class="term">
@@ -115,7 +115,7 @@
         </tbody>
     </table>
 
-    <div class="term" role="presentation">
+    <div class="term" aria-hidden="true" role="presentation">
         <div style="grid-area: 1 / 1 / 4 / 4">&nbsp;<br /><br /><br /></div>
         <div style="grid-area: 4 / 1 / 5 / 2">[RO] SCR1 WCAG&nbsp;2.0&nbsp;WAI&#8209;AA</div>
         <div style="grid-area: 4 / 2 / 5 / 4; text-align: right;">(c)&nbsp;Landtable Surveillance</div>
