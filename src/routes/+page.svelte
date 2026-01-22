@@ -27,6 +27,14 @@
                 <td>390119</td>
             </tr>
             <tr>
+                <th scope="row">Stack trace</th>
+                <td class="type">flags</td>
+                <td>
+                    Tainted: &Theta;&Delta; &#x26A6; &amp; &pi;
+                    <br />RIP: dump_stack+0x19/0x1b
+                </td>
+            </tr>
+            <tr>
                 <th scope="row">Occupation</th>
                 <td class="type">string</td>
                 <td>student</td>
@@ -37,13 +45,13 @@
                 <td>62012<br /><span class="faint">Business and domestic software development</span></td>
             </tr>
             <tr>
-                <th scope="row">Connections</th>
-                <td class="type">array&lt;link&gt;</td>
+                <th scope="row">Pronouns</th>
+                <td class="type">array&lt;string&gt;</td>
                 <td>
                     <span class="faint pre" aria-hidden="true">+ Array [2]</span>
                     <ol>
-                        <li><a href="https://www.linkedin.com/in/sarah-pawton/">Sarah Pawton on LinkedIn</a></li>
-                        <li><a href="https://github.com/iamawatermelo">iamawatermelo on GitHub</a></li>
+                        <li>it/its</li>
+                        <li>she/her</li>
                     </ol>
                 </td>
             </tr>
@@ -57,6 +65,17 @@
                         <li>067008 Valerie</li>
                         <li>390121 Willow</li>
                         <li>777053 Ashley</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Connections</th>
+                <td class="type">array&lt;link&gt;</td>
+                <td>
+                    <span class="faint pre" aria-hidden="true">+ Array [2]</span>
+                    <ol>
+                        <li><a href="https://www.linkedin.com/in/sarah-pawton/">Sarah Pawton on LinkedIn</a></li>
+                        <li><a href="https://github.com/iamawatermelo">iamawatermelo on GitHub</a></li>
                     </ol>
                 </td>
             </tr>
