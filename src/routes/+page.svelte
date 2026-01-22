@@ -3,7 +3,7 @@
 </script>
 
 <main>
-    <div class="prelude">
+    <div class="prelude" role="presentation">
         <Logo class="logo" />
 
         <div class="term">
