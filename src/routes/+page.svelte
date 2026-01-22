@@ -64,7 +64,6 @@
                 <th scope="row">Pronouns</th>
                 <td class="type">array&lt;string&gt;</td>
                 <td>
-                    <div class="faint pre" role="presentation">+ Array [2]</div>
                     <ol>
                         <li>it/its</li>
                         <li>she/her</li>
@@ -75,7 +74,6 @@
                 <th scope="row">Service formed of</th>
                 <td class="type">array&lt;object&gt;</td>
                 <td>
-                    <div class="faint pre" role="presentation">+ Array [4]</div>
                     <ol>
                         <li>350121 Natalie</li>
                         <li>067008 Valerie</li>
@@ -88,7 +86,6 @@
                 <th scope="row">Connections</th>
                 <td class="type">array&lt;link&gt;</td>
                 <td>
-                    <div class="faint pre" role="presentation">+ Array [2]</div>
                     <ol>
                         <li>
                             <a href="https://www.linkedin.com/in/sarah-pawton/">Sarah Pawton on LinkedIn</a>
@@ -103,7 +100,6 @@
                 <th scope="row">Featured works</th>
                 <td class="type">array&lt;link&gt;</td>
                 <td>
-                    <div class="faint pre" role="presentation">+ Array [2]</div>
                     <ol>
                         <li>
                             <a href="https://github.com/iamawatermelo/wakapi-anyide">wakapi-anyide</a><br />
@@ -121,8 +117,8 @@
 
     <div class="term" role="presentation">
         <div style="grid-area: 1 / 1 / 4 / 4">&nbsp;<br /><br /><br /></div>
-        <div style="grid-area: 4 / 1 / 5 / 2">[RO] SCR1</div>
-        <div style="grid-area: 4 / 2 / 5 / 4;text-align: right;">(c) Landtable Surveillance</div>
+        <div style="grid-area: 4 / 1 / 5 / 2">[RO] SCR1 WCAG&nbsp;2.0&nbsp;WAI&#8209;AA</div>
+        <div style="grid-area: 4 / 2 / 5 / 4; text-align: right;">(c)&nbsp;Landtable Surveillance</div>
     </div>
 </main>
 
@@ -132,7 +128,7 @@
         padding: 1em;
         margin-top: 4em;
         max-width: 48em;
-        
+
         @media (max-width: 32em) {
             margin-top: 2em;
         }
@@ -163,7 +159,7 @@
     div {
         margin: 0;
     }
-    
+
     h1 {
         margin-top: 1em;
     }
@@ -172,25 +168,25 @@
         width: 4em;
         height: 4em;
         margin-bottom: 2em;
-        
+
         @media (max-width: 24em) {
             width: 2em;
             height: 2em;
             margin-bottom: 1em;
         }
     }
-    
+
     @media (min-width: 64em) {
         .prelude {
             position: relative;
         }
-        
+
         :global(.logo) {
             position: absolute;
             left: -6em;
         }
     }
-    
+
     .term {
         font-family: 'Iosevka', monospace;
         font-feature-settings:
@@ -198,17 +194,18 @@
             'calt' off;
         column-gap: 1ch;
         opacity: 0.6;
+        user-select: none;
 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        
+
         @media (max-width: 32em) {
             .mob-hide {
                 display: none;
             }
-            
+
             /* i'm as upset as you are that i'm using !important */
-            
+
             .mob-right {
                 grid-column: 2 / 4 !important;
                 text-align: right !important;
@@ -256,12 +253,9 @@
             opacity: 0.6;
         }
 
-        .pre {
-            white-space: pre;
-        }
-
         .type {
             color: var(--accent);
+            opacity: 0.8;
         }
     }
 
@@ -286,11 +280,20 @@
 
             &::before {
                 grid-column: 1;
+                width: max-content;
                 opacity: 0.6;
-                content: counter(list) ':';
+                content: '- ' counter(list) ':';
                 padding-left: 2ch;
                 padding-right: 1ch;
             }
+        }
+
+        &::after {
+            grid-area: 1 / 1 / 2 / 3;
+            counter-increment: list 1;
+            width: max-content;
+            opacity: 0.6;
+            content: '+ Array [' counter(list) ']';
         }
     }
 
