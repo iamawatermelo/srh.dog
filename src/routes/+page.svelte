@@ -187,7 +187,7 @@
         margin: 0;
         padding: 0;
         list-style-type: none;
-        counter-reset: list 0;
+        counter-reset: list -1;
         
         li {
             display: grid;
