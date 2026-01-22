@@ -40,41 +40,41 @@
                 <th scope="row">Connections</th>
                 <td class="type">array&lt;link&gt;</td>
                 <td>
-                    <span class="faint pre">+ Array [2]</span>
-                    <div class="array-item"><span class="faint pre">&nbsp;&nbsp;0:&nbsp;</span><a href="https://www.linkedin.com/in/sarah-pawton/">Sarah Pawton on LinkedIn</a></div>
-                    <div class="array-item"><span class="faint pre">&nbsp;&nbsp;1:&nbsp;</span><a href="https://github.com/iamawatermelo">iamawatermelo on GitHub</a></div>
+                    <span class="faint pre" aria-hidden="true">+ Array [2]</span>
+                    <ol>
+                        <li><a href="https://www.linkedin.com/in/sarah-pawton/">Sarah Pawton on LinkedIn</a></li>
+                        <li><a href="https://github.com/iamawatermelo">iamawatermelo on GitHub</a></li>
+                    </ol>
                 </td>
             </tr>
             <tr>
-                <th scope="row">Members</th>
+                <th scope="row">Formed of</th>
                 <td class="type">array&lt;object&gt;</td>
                 <td>
-                    <span class="faint pre">+ Array [4]</span>
-                    <div class="array-item"><span class="faint pre">&nbsp;&nbsp;0:&nbsp;</span><span>Natalie</span></div>
-                    <div class="array-item"><span class="faint pre">&nbsp;&nbsp;1:&nbsp;</span><span>Valerie</span></div>
-                    <div class="array-item"><span class="faint pre">&nbsp;&nbsp;2:&nbsp;</span><span>Willow</span></div>
-                    <div class="array-item"><span class="faint pre">&nbsp;&nbsp;3:&nbsp;</span><span>Ashley</span></div>
+                    <span class="faint pre" aria-hidden="true">+ Array [4]</span>
+                    <ol>
+                        <li>350121 Natalie</li>
+                        <li>067008 Valerie</li>
+                        <li>390121 Willow</li>
+                        <li>777053 Ashley</li>
+                    </ol>
                 </td>
             </tr>
             <tr>
                 <th scope="row">Featured works</th>
                 <td class="type">array&lt;link&gt;</td>
                 <td>
-                    <span class="faint pre">+ Array [2]</span>
-                    <div class="array-item">
-                        <span class="faint pre">&nbsp;&nbsp;0:&nbsp;</span>
-                        <span>
+                    <span class="faint pre" aria-hidden="true">+ Array [2]</span>
+                    <ol>
+                        <li>
                             <a href="https://github.com/iamawatermelo/wakapi-anyide">wakapi-anyide</a><br />
                             <span class="faint">Time tracking tools to help global teenagers step into programming</span>
-                        </span>
-                    </div>
-                    <div class="array-item">
-                        <span class="faint pre">&nbsp;&nbsp;1:&nbsp;</span>
-                        <span>
+                        </li>
+                        <li>
                             <a href="https://github.com/iamawatermelo/maybe-material">Maybe Material</a><br />
                             <span class="faint">72 vibrant, harmonious themes for Zed, built with colour science</span>
-                        </span>
-                    </div>
+                        </li>
+                    </ol>
                 </td>
             </tr>
         </tbody>
@@ -159,10 +159,23 @@
         .type {
             color: #66158A;
         }
+    }
+    
+    ol {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        counter-reset: list 0;
         
-        .array-item {
-            display: flex;
-            flex-direction: row;
+        li {
+            counter-increment: list 1;
+            
+            &::before {
+                opacity: 0.6;
+                content: counter(list) ":";
+                padding-left: 2ex;
+                padding-right: 1ex;
+            }
         }
     }
     
