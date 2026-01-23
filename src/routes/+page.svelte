@@ -147,8 +147,8 @@
         <div style="grid-area: 5 / 1 / 6 / 4" aria-hidden="true">&nbsp;</div>
         <div style="grid-area: 6 / 2 / 7 / 3">
             <a href="/embedding.txt" class="noarrow">
-                <img src="/button-dark.gif" alt="srh.dog" class="x88x31 dark" />
-                <img src="/button-light.gif" alt="srh.dog" class="x88x31 light" />
+                <img src="/button-dark.gif" alt="srh.dog" loading="lazy" class="x88x31 dark" />
+                <img src="/button-light.gif" alt="srh.dog" loading="lazy" class="x88x31 light" />
             </a>
         </div>
     </footer>
