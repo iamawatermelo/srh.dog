@@ -51,11 +51,6 @@
                 <td>student</td>
             </tr>
             <tr>
-                <th scope="row">Last seen</th>
-                <td class="type">location</td>
-                <td>SJ711547 <span class="aside faint">EPSG:27700</span></td>
-            </tr>
-            <tr>
                 <th scope="row">Connections</th>
                 <td class="type">array&lt;link&gt;</td>
                 <td>
@@ -84,6 +79,11 @@
                         </li>
                     </ol>
                 </td>
+            </tr>
+            <tr>
+                <th scope="row">Last seen</th>
+                <td class="type">location</td>
+                <td>SJ711547 <span class="aside faint">EPSG:27700</span></td>
             </tr>
             <tr>
                 <th scope="row">Nature of business</th>
@@ -127,12 +127,13 @@
                 </td>
             </tr>
             <tr>
-                <th scope="row">Related entities</th>
-                <td class="type">array&lt;link&gt;</td>
+                <th scope="row">External entities</th>
+                <td class="type">array&lt;entity&gt;</td>
                 <td>
                     <ol>
                         <li>
-                            <a href="https://transcental.dev/">transcental.dev</a>
+                            <a href="https://transcental.dev/">158863 [transcental.dev]</a>
+                            <a href="https://prpl.wtf/">323243 [prpl.wtf]</a>
                         </li>
                     </ol>
                 </td>
