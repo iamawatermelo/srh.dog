@@ -89,7 +89,7 @@
             </tr>
             <tr>
                 <th scope="row">Stack trace</th>
-                <td class="type">flags</td>
+                <td class="type">string</td>
                 <td>
                     Tainted:
                     <abbr title="theriantropy">&Theta;&Delta;</abbr>
@@ -101,7 +101,7 @@
             </tr>
             <tr>
                 <th scope="row">Pronouns</th>
-                <td class="type">array&lt;string&gt;</td>
+                <td class="type">array&lt;entity&gt;</td>
                 <td>
                     <ol>
                         <li>it/its</li>
@@ -249,10 +249,10 @@
             color: var(--accent);
             font-size: 0.8em;
             text-transform: uppercase;
-            
+
             tr {
                 padding: 0.5em;
-    
+
                 border-bottom: 1px dashed color-mix(in srgb, var(--accent), transparent 60%);
             }
         }
@@ -272,7 +272,7 @@
         .faint {
             opacity: 0.6;
         }
-        
+
         .aside {
             display: inline-block;
         }
@@ -333,8 +333,9 @@
             tr {
                 grid-column: 1 / 3;
             }
-            
-            thead tr, tbody tr {
+
+            thead tr,
+            tbody tr {
                 padding: 1em 0.5em;
             }
 
