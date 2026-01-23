@@ -106,7 +106,7 @@
             </tr>
             <tr>
                 <th scope="row">Pronouns</th>
-                <td class="type">array&lt;entity&gt;</td>
+                <td class="type">array&lt;string&gt;</td>
                 <td>
                     <ol>
                         <li>it/its</li>
@@ -116,7 +116,7 @@
             </tr>
             <tr>
                 <th scope="row">Formed of</th>
-                <td class="type">array&lt;object&gt;</td>
+                <td class="type">array&lt;entity&gt;</td>
                 <td>
                     <ol>
                         <li>350121 Natalie</li>
