@@ -145,7 +145,7 @@
 
     <footer class="term">
         <div style="grid-area: 1 / 1 / 4 / 4" aria-hidden="true">&nbsp;<br /><br /><br /></div>
-        <div style="grid-area: 4 / 1 / 5 / 2" aria-hidden="true">[RO] SCR1 WCAG&nbsp;2.0&nbsp;WAI&#8209;AA</div>
+        <div style="grid-area: 4 / 1 / 5 / 2" aria-hidden="true">[RO] SCR1 WCAG&nbsp;2.2&nbsp;WAI&#8209;AA</div>
         <div style="grid-area: 4 / 2 / 5 / 4; text-align: right;">(c)&nbsp;Landtable Surveillance</div>
         <div style="grid-area: 5 / 1 / 6 / 4" aria-hidden="true">&nbsp;</div>
         <div style="grid-area: 6 / 2 / 7 / 3">
@@ -341,6 +341,15 @@
             opacity: 0.6;
             content: '+ Array [' counter(list) ']' / '';
         }
+        
+        /* WCAG 2.2 SC 2.5.8 */
+        &:has(a) {
+            row-gap: 1ch;
+            
+            a {
+                min-height: 1.5em;
+            }
+        }
     }
 
     .x88x31 {
@@ -383,13 +392,20 @@
             tbody tr {
                 padding: 1em 0.5em;
             }
+            
+            thead tr > *:nth-child(1) {
+                opacity: 0.8;
+            }
+            
+            tbody tr > *:nth-child(1) {
+                opacity: 0.6;
+            }
 
             tr {
                 row-gap: 0.5em;
 
                 > *:nth-child(1) {
                     grid-column: 1;
-                    opacity: 0.6;
                 }
 
                 > *:nth-child(2) {
