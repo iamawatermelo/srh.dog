@@ -3,18 +3,18 @@
 </script>
 
 <main>
-    <div class="prelude" aria-hidden="true" role="presentation">
-        <Logo class="logo" />
+    <div class="prelude">
+        <Logo class="logo" aria-hidden="true" />
 
         <div class="term">
             <div style="grid-area: 1 / 1 / 2 / 2">VT2103</div>
             <div style="grid-area: 1 / 2 / 2 / 3; text-align: center;" class="mob-right">Detailed User Display</div>
             <div style="grid-area: 1 / 3 / 2 / 4; text-align: right;" class="mob-hide">05/07/2025&nbsp;13:26</div>
-            <div style="grid-area: 2 / 1 / 3 / 2" class="mob-hide">COMMAND ==></div>
+            <div style="grid-area: 2 / 1 / 3 / 2" class="mob-hide" aria-hidden="true">COMMAND ==></div>
             <div style="grid-area: 2 / 2 / 3 / 4; text-align: right;" class="mob-hide">
                 All sectors; WTT times; Page&nbsp;1..&nbsp;of&nbsp;1
             </div>
-            <div style="grid-area: 3 / 1 / 3 / 4">&nbsp;</div>
+            <div style="grid-area: 3 / 1 / 3 / 4" aria-hidden="true">&nbsp;</div>
             <div style="grid-area: 4 / 1 / 5 / 4">USER REPORT: 390119 SARAH PAWTON at 13:26 05/07/2025</div>
         </div>
     </div>
@@ -44,7 +44,11 @@
                 <th scope="row">Stack trace</th>
                 <td class="type">flags</td>
                 <td>
-                    Tainted: &Theta;&Delta; &#x26B2; &amp; &pi;
+                    Tainted:
+                    <abbr title="theriantropy">&Theta;&Delta;</abbr>
+                    <abbr title="agender">&#x26B2;</abbr>
+                    <abbr title="plural">&amp;</abbr>
+                    <abbr title="polyamorous">&pi;</abbr>
                     <br />RIP: dump_stack+0x19/0x1b
                 </td>
             </tr>
@@ -115,11 +119,11 @@
         </tbody>
     </table>
 
-    <div class="term" aria-hidden="true" role="presentation">
-        <div style="grid-area: 1 / 1 / 4 / 4">&nbsp;<br /><br /><br /></div>
-        <div style="grid-area: 4 / 1 / 5 / 2">[RO] SCR1 WCAG&nbsp;2.0&nbsp;WAI&#8209;AA</div>
+    <footer class="term">
+        <div style="grid-area: 1 / 1 / 4 / 4" aria-hidden="true">&nbsp;<br /><br /><br /></div>
+        <div style="grid-area: 4 / 1 / 5 / 2" aria-hidden="true">[RO] SCR1 WCAG&nbsp;2.0&nbsp;WAI&#8209;AA</div>
         <div style="grid-area: 4 / 2 / 5 / 4; text-align: right;">(c)&nbsp;Landtable Surveillance</div>
-    </div>
+    </footer>
 </main>
 
 <style>
@@ -144,7 +148,7 @@
             text-decoration: none;
             transition: transform 100ms;
             padding-left: 1ch;
-            content: '->';
+            content: '->' / '';
         }
 
         &:hover {
@@ -154,6 +158,11 @@
         &:hover::after {
             transform: translateX(1ex);
         }
+    }
+    
+    abbr {
+        /* deliberately inaccessible */
+        text-decoration: none;
     }
 
     div {
@@ -282,7 +291,7 @@
                 grid-column: 1;
                 width: max-content;
                 opacity: 0.6;
-                content: '- ' counter(list) ':';
+                content: '- ' counter(list) ':' / '';
                 padding-left: 2ch;
                 padding-right: 1ch;
             }
@@ -293,7 +302,7 @@
             counter-increment: list 1;
             width: max-content;
             opacity: 0.6;
-            content: '+ Array [' counter(list) ']';
+            content: '+ Array [' counter(list) ']' / '';
         }
     }
 
