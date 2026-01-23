@@ -1,0 +1,3 @@
+<a href="https://srh.dog/">
+    <img style="image-rendering: pixelated" src="/button.gif" alt="srh.dog" class="x88x31" />
+</a>

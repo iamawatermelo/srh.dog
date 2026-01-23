@@ -4,7 +4,7 @@
 
 <svelte:head>
     <title>Sarah Pawton</title>
-    <meta name="description" content="USER REPORT: 390119 SARAH PAWTON at 13:26 05/07/2025">
+    <meta name="description" content="USER REPORT: 390119 SARAH PAWTON at 13:26 05/07/2025" />
 </svelte:head>
 
 <main>
@@ -144,6 +144,10 @@
         <div style="grid-area: 1 / 1 / 4 / 4" aria-hidden="true">&nbsp;<br /><br /><br /></div>
         <div style="grid-area: 4 / 1 / 5 / 2" aria-hidden="true">[RO] SCR1 WCAG&nbsp;2.0&nbsp;WAI&#8209;AA</div>
         <div style="grid-area: 4 / 2 / 5 / 4; text-align: right;">(c)&nbsp;Landtable Surveillance</div>
+        <div style="grid-area: 5 / 1 / 6 / 4" aria-hidden="true">&nbsp;</div>
+        <div style="grid-area: 6 / 2 / 7 / 3">
+            <a href="/embedding.txt" class="noarrow"><img src="/button.gif" alt="srh.dog" class="x88x31" /></a>
+        </div>
     </footer>
 </main>
 
@@ -164,7 +168,7 @@
         color: var(--accent);
         text-decoration: dotted underline;
 
-        &::after {
+        &:not(.noarrow)::after {
             display: inline-block;
             text-decoration: none;
             transition: transform 100ms;
@@ -331,6 +335,15 @@
             opacity: 0.6;
             content: '+ Array [' counter(list) ']' / '';
         }
+    }
+
+    .x88x31 {
+        width: 88px;
+        height: 31px;
+        
+        display: block;
+        margin: auto;
+        image-rendering: pixelated;
     }
 
     /* Small width devices: Move type underneath the term */
