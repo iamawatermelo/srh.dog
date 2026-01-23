@@ -341,34 +341,34 @@
             opacity: 0.6;
             content: '+ Array [' counter(list) ']' / '';
         }
-        
+
         /* WCAG 2.2 SC 2.5.8 */
-        &:has(a) {
-            row-gap: 1ch;
-            
-            a {
-                min-height: 1.5em;
-            }
+        a {
+            min-height: 1.5em;
+        }
+        
+        &:has(.faint) li:not(:last-child) {
+            padding-bottom: 0.5em;
         }
     }
 
     .x88x31 {
         width: 88px;
         height: 31px;
-        
+
         display: block;
         margin: auto;
         image-rendering: pixelated;
-        
+
         &.dark {
             display: none;
         }
-        
+
         @media (prefers-color-scheme: dark) {
             &.light {
                 display: none;
             }
-            
+
             &.dark {
                 display: block;
             }
@@ -392,11 +392,11 @@
             tbody tr {
                 padding: 1em 0.5em;
             }
-            
+
             thead tr > *:nth-child(1) {
                 opacity: 0.8;
             }
-            
+
             tbody tr > *:nth-child(1) {
                 opacity: 0.6;
             }
