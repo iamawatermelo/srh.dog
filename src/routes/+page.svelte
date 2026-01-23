@@ -2,6 +2,11 @@
     import Logo from '$lib/Logo.svelte';
 </script>
 
+<svelte:head>
+    <title>Sarah Pawton</title>
+    <meta name="description" content="USER REPORT: 390119 SARAH PAWTON at 13:26 05/07/2025">
+</svelte:head>
+
 <main>
     <div class="prelude">
         <Logo class="logo" aria-hidden="true" />
