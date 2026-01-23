@@ -121,6 +121,17 @@
                     </ol>
                 </td>
             </tr>
+            <tr>
+                <th scope="row">Related entities</th>
+                <td class="type">array&lt;link&gt;</td>
+                <td>
+                    <ol>
+                        <li>
+                            <a href="https://transcental.dev/">transcental.dev</a>
+                        </li>
+                    </ol>
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -175,6 +186,7 @@
     }
 
     h1 {
+        font-family: 'Iosevka Expanded', system-ui;
         margin-top: 1em;
     }
 
@@ -202,10 +214,7 @@
     }
 
     .term {
-        font-family: 'Iosevka', monospace;
-        font-feature-settings:
-            'ss20',
-            'calt' off;
+        font-feature-settings: 'calt' off;
         column-gap: 1ch;
         opacity: 0.6;
         user-select: none;
@@ -233,8 +242,6 @@
         grid-template-columns: max-content max-content 1fr;
         column-gap: 2em;
 
-        font-family: 'Iosevka', monospace;
-        font-feature-settings: 'ss20';
         text-align: left;
 
         thead,
