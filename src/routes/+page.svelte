@@ -38,17 +38,10 @@
             <tr>
                 <th scope="row">Subject description</th>
                 <td class="type">string</td>
-                <td>dog</td>
-            </tr>
-            <tr>
-                <th scope="row">Subject ID</th>
-                <td class="type">u64</td>
-                <td>390119</td>
-            </tr>
-            <tr>
-                <th scope="row">Occupation</th>
-                <td class="type">string</td>
-                <td>student</td>
+                <td>
+                    Multidisciplinary, capable student.
+                    Interested in systems programming, app design, web accessibility, distributed systems and railway operations.
+                </td>
             </tr>
             <tr>
                 <th scope="row">Connections</th>
@@ -70,20 +63,33 @@
                 <td>
                     <ol>
                         <li>
-                            <a href="https://github.com/iamawatermelo/wakapi-anyide">wakapi-anyide</a><br />
-                            <div class="faint">Time tracking tools to help global teenagers step into programming</div>
+                            <a href="https://github.com/iamawatermelo/maybe-material">Maybe Material</a>
+                            <div>2026 <span class="faint">72 vibrant, harmonious themes for Zed, built with colour science</span></div>
                         </li>
                         <li>
-                            <a href="https://github.com/iamawatermelo/maybe-material">Maybe Material</a><br />
-                            <div class="faint">72 vibrant, harmonious themes for Zed, built with colour science</div>
+                            <a href="https://github.com/iamawatermelo/wakapi-anyide">wakapi-anyide</a>
+                            <div>2025 <span class="faint">Time tracking tools to help global teenagers step into programming</span></div>
+                        </li>
+                        <li>
+                            <a href="https://revolution.uppy.pet/">Revolution</a>
+                            <div>2025 <span class="faint">Train-themed website for a UK teen-led hackathon</span></div>
+                        </li>
+                        <li>
+                            <a href="https://zenith.uppy.pet/">Zenith</a>
+                            <div>2024 <span class="faint">Space-themed website for an international teen-led coding summit</span></div>
                         </li>
                     </ol>
                 </td>
             </tr>
             <tr>
-                <th scope="row">Last seen</th>
-                <td class="type">location</td>
-                <td>SJ711547 <span class="aside faint">EPSG:27700</span></td>
+                <th scope="row">Subject type</th>
+                <td class="type">string</td>
+                <td>dog</td>
+            </tr>
+            <tr>
+                <th scope="row">Subject ID</th>
+                <td class="type">u64</td>
+                <td>390119</td>
             </tr>
             <tr>
                 <th scope="row">Nature of business</th>
@@ -91,6 +97,11 @@
                 <td>
                     62012 <span class="aside faint">Business and domestic software development</span>
                 </td>
+            </tr>
+            <tr>
+                <th scope="row">Last seen</th>
+                <td class="type">location</td>
+                <td>SJ711547 <span class="aside faint">EPSG:27700</span></td>
             </tr>
             <tr>
                 <th scope="row">Stack trace</th>
