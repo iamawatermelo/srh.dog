@@ -67,12 +67,12 @@
                             <div>2026 <span class="faint">72 vibrant, harmonious themes for Zed, built with colour science</span></div>
                         </li>
                         <li>
-                            <a href="https://github.com/iamawatermelo/wakapi-anyide">wakapi-anyide</a>
-                            <div>2025 <span class="faint">Time tracking tools to help global teenagers step into programming</span></div>
-                        </li>
-                        <li>
                             <a href="https://revolution.uppy.pet/">Revolution</a>
                             <div>2025 <span class="faint">Train-themed website for a UK teen-led hackathon</span></div>
+                        </li>
+                        <li>
+                            <a href="https://github.com/iamawatermelo/wakapi-anyide">wakapi-anyide</a>
+                            <div>2024 <span class="faint">Time tracking tools to help global teenagers step into programming</span></div>
                         </li>
                         <li>
                             <a href="https://zenith.uppy.pet/">Zenith</a>
