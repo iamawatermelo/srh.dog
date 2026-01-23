@@ -7,10 +7,10 @@
         <Logo class="logo" aria-hidden="true" />
 
         <div class="term">
-            <div style="grid-area: 1 / 1 / 2 / 2">VT2103</div>
+            <div style="grid-area: 1 / 1 / 2 / 2">#AWTDASP</div>
             <div style="grid-area: 1 / 2 / 2 / 3; text-align: center;" class="mob-right">Detailed User Display</div>
             <div style="grid-area: 1 / 3 / 2 / 4; text-align: right;" class="mob-hide">05/07/2025&nbsp;13:26</div>
-            <div style="grid-area: 2 / 1 / 3 / 2" class="mob-hide" aria-hidden="true">COMMAND ==></div>
+            <div style="grid-area: 2 / 1 / 3 / 2" class="mob-hide" aria-hidden="true">==></div>
             <div style="grid-area: 2 / 2 / 3 / 4; text-align: right;" class="mob-hide">
                 All sectors; WTT times; Page&nbsp;1..&nbsp;of&nbsp;1
             </div>
@@ -41,50 +41,14 @@
                 <td>390119</td>
             </tr>
             <tr>
-                <th scope="row">Stack trace</th>
-                <td class="type">flags</td>
-                <td>
-                    Tainted:
-                    <abbr title="theriantropy">&Theta;&Delta;</abbr>
-                    <abbr title="agender">&#x26B2;</abbr>
-                    <abbr title="plural">&amp;</abbr>
-                    <abbr title="polyamorous">&pi;</abbr>
-                    <br />RIP: dump_stack+0x19/0x1b
-                </td>
-            </tr>
-            <tr>
                 <th scope="row">Occupation</th>
                 <td class="type">string</td>
                 <td>student</td>
             </tr>
             <tr>
-                <th scope="row">Nature of business</th>
-                <td class="type">enumeration</td>
-                <td
-                    >62012
-                    <div class="faint">Business and domestic software development</div></td>
-            </tr>
-            <tr>
-                <th scope="row">Pronouns</th>
-                <td class="type">array&lt;string&gt;</td>
-                <td>
-                    <ol>
-                        <li>it/its</li>
-                        <li>she/her</li>
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">Service formed of</th>
-                <td class="type">array&lt;object&gt;</td>
-                <td>
-                    <ol>
-                        <li>350121 Natalie</li>
-                        <li>067008 Valerie</li>
-                        <li>390121 Willow</li>
-                        <li>777053 Ashley</li>
-                    </ol>
-                </td>
+                <th scope="row">Last seen</th>
+                <td class="type">location</td>
+                <td>SJ711547 <span class="aside faint">EPSG:27700</span></td>
             </tr>
             <tr>
                 <th scope="row">Connections</th>
@@ -113,6 +77,47 @@
                             <a href="https://github.com/iamawatermelo/maybe-material">Maybe Material</a><br />
                             <div class="faint">72 vibrant, harmonious themes for Zed, built with colour science</div>
                         </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Nature of business</th>
+                <td class="type">enumeration</td>
+                <td>
+                    62012 <span class="aside faint">Business and domestic software development</span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Stack trace</th>
+                <td class="type">flags</td>
+                <td>
+                    Tainted:
+                    <abbr title="theriantropy">&Theta;&Delta;</abbr>
+                    <abbr title="agender">&#x26B2;</abbr>
+                    <abbr title="plural">&amp;</abbr>
+                    <abbr title="polyamorous">&pi;</abbr>
+                    <br />RIP: dump_stack+0x19/0x1b
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Pronouns</th>
+                <td class="type">array&lt;string&gt;</td>
+                <td>
+                    <ol>
+                        <li>it/its</li>
+                        <li>she/her</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Formed of</th>
+                <td class="type">array&lt;object&gt;</td>
+                <td>
+                    <ol>
+                        <li>350121 Natalie</li>
+                        <li>067008 Valerie</li>
+                        <li>390121 Willow</li>
+                        <li>777053 Ashley</li>
                     </ol>
                 </td>
             </tr>
@@ -159,7 +164,7 @@
             transform: translateX(1ex);
         }
     }
-    
+
     abbr {
         /* deliberately inaccessible */
         text-decoration: none;
@@ -226,7 +231,7 @@
         display: grid;
         grid-auto-flow: row;
         grid-template-columns: max-content max-content 1fr;
-        gap: 0.5em;
+        column-gap: 2em;
 
         font-family: 'Iosevka', monospace;
         font-feature-settings: 'ss20';
@@ -244,14 +249,20 @@
             color: var(--accent);
             font-size: 0.8em;
             text-transform: uppercase;
+            
+            tr {
+                padding: 0.5em;
+    
+                border-bottom: 1px dashed color-mix(in srgb, var(--accent), transparent 60%);
+            }
         }
 
-        tbody {
-            gap: 0.25em;
-        }
+        tbody tr {
+            padding: 0.5em;
 
-        tr {
-            gap: 2rem;
+            &:not(:last-child) {
+                border-bottom: 1px dashed #ffffff55;
+            }
         }
 
         th {
@@ -260,6 +271,10 @@
 
         .faint {
             opacity: 0.6;
+        }
+        
+        .aside {
+            display: inline-block;
         }
 
         .type {
@@ -312,16 +327,15 @@
         table {
             grid-template-columns: 1fr min-content;
             grid-auto-flow: column;
-            gap: 1em;
 
             thead,
             tbody,
             tr {
                 grid-column: 1 / 3;
             }
-
-            tbody {
-                gap: 2em;
+            
+            thead tr, tbody tr {
+                padding: 1em 0.5em;
             }
 
             tr {
