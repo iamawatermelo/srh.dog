@@ -1,14 +1,19 @@
-<!-- Dark theme button -->
+<!--
+    Use this HTML code to embed the srh.dog button on your website!
+    This code is provided to you as-is.
+-->
+
+<!-- 1. Dark theme button -->
 <a href="https://srh.dog/">
     <img style="image-rendering: pixelated" src="https://srh.dog/button-dark.gif" alt="srh.dog" />
 </a>
 
-<!-- Light theme button -->
+<!-- 2. Light theme button -->
 <a href="https://srh.dog/">
     <img style="image-rendering: pixelated" src="https://srh.dog/button-light.gif" alt="srh.dog" />
 </a>
 
-<!-- Dynamic button -->
+<!-- 3. Dynamic button (with CSS) -->
 <a href="https://srh.dog/">
     <img style="image-rendering: pixelated" src="https://srh.dog/button-light.gif" alt="srh.dog" class="srh-dog-light"/>
     <img style="image-rendering: pixelated" src="https://srh.dog/button-dark.gif" alt="srh.dog" class="srh-dog-dark" />
