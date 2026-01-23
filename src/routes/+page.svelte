@@ -146,7 +146,10 @@
         <div style="grid-area: 4 / 2 / 5 / 4; text-align: right;">(c)&nbsp;Landtable Surveillance</div>
         <div style="grid-area: 5 / 1 / 6 / 4" aria-hidden="true">&nbsp;</div>
         <div style="grid-area: 6 / 2 / 7 / 3">
-            <a href="/embedding.txt" class="noarrow"><img src="/button.gif" alt="srh.dog" class="x88x31" /></a>
+            <a href="/embedding.txt" class="noarrow">
+                <img src="/button-dark.gif" alt="srh.dog" class="x88x31 dark" />
+                <img src="/button-light.gif" alt="srh.dog" class="x88x31 light" />
+            </a>
         </div>
     </footer>
 </main>
@@ -277,7 +280,7 @@
             padding: 0.5em;
 
             &:not(:last-child) {
-                border-bottom: 1px dashed #ffffff55;
+                border-bottom: 1px dashed color-mix(in srgb, var(--color), transparent 60%);
             }
         }
 
@@ -344,6 +347,20 @@
         display: block;
         margin: auto;
         image-rendering: pixelated;
+        
+        &.dark {
+            display: none;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            &.light {
+                display: none;
+            }
+            
+            &.dark {
+                display: block;
+            }
+        }
     }
 
     /* Small width devices: Move type underneath the term */

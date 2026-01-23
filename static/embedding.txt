@@ -1,3 +1,31 @@
+<!-- Dark theme button -->
 <a href="https://srh.dog/">
-    <img style="image-rendering: pixelated" src="https://srh.dog/button.gif" alt="srh.dog" class="x88x31" />
+    <img style="image-rendering: pixelated" src="https://srh.dog/button-dark.gif" alt="srh.dog" />
 </a>
+
+<!-- Light theme button -->
+<a href="https://srh.dog/">
+    <img style="image-rendering: pixelated" src="https://srh.dog/button-light.gif" alt="srh.dog" />
+</a>
+
+<!-- Dynamic button -->
+<a href="https://srh.dog/">
+    <img style="image-rendering: pixelated" src="https://srh.dog/button-light.gif" alt="srh.dog" class="srh-dog-light"/>
+    <img style="image-rendering: pixelated" src="https://srh.dog/button-dark.gif" alt="srh.dog" class="srh-dog-dark" />
+</a>
+
+<style>
+    .srh-dog-dark {
+        display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .srh-dog-dark {
+            display: inline-block;
+        }
+
+        .srh-dog-light {
+            display: none;
+        }
+    }
+</style>
