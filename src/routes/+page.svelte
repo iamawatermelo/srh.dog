@@ -213,6 +213,7 @@
 
     h1 {
         font-family: 'Iosevka Expanded', system-ui;
+        font-feature-settings: normal;
         margin-top: 1em;
     }
 
@@ -240,7 +241,7 @@
     }
 
     .term {
-        font-feature-settings: 'calt' off;
+        font-feature-settings: 'ss20', 'calt' off;
         column-gap: 1ch;
         opacity: 0.6;
         user-select: none;

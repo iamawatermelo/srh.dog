@@ -1,22 +1,22 @@
 @font-face {
-  font-family: 'Iosevka';
-  src: url('$lib/fonts/Iosevka-Normal-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: 'Iosevka';
+    src: url('$lib/fonts/Iosevka-Normal-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
 @font-face {
-  font-family: 'Iosevka Expanded';
-  src: url('$lib/fonts/Iosevka-Expanded-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: block;
+    font-family: 'Iosevka Expanded';
+    src: url('$lib/fonts/Iosevka-Expanded-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: block;
 }
 
 :root {
     --accent: #66158a;
-    
+
     @media (prefers-color-scheme: dark) {
         --accent: #f684e7;
     }
@@ -26,12 +26,12 @@ html {
     color-scheme: light dark;
     font-family: 'Iosevka', 'Adwaita Mono', monospace;
     font-feature-settings: 'ss20';
-    
+
     background: #f2f0f2;
     color: #0f0f0f;
     --color: #0f0f0f;
     --inverse: #f2f0f2;
-    
+
     @media (prefers-color-scheme: dark) {
         background: #1f0f1f;
         color: #f0f0f0;
