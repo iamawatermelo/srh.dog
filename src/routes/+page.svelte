@@ -39,8 +39,8 @@
                 <th scope="row">Subject description</th>
                 <td class="type">string</td>
                 <td>
-                    Multidisciplinary, capable student. Interested in systems programming, app design, web
-                    accessibility, distributed systems and railway operations.
+                    Student interested in systems programming, app design, web accessibility, distributed systems and
+                    railway operations.
                 </td>
             </tr>
             <tr>
