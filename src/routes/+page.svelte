@@ -39,8 +39,8 @@
                 <th scope="row">Subject description</th>
                 <td class="type">string</td>
                 <td>
-                    Multidisciplinary, capable student.
-                    Interested in systems programming, app design, web accessibility, distributed systems and railway operations.
+                    Multidisciplinary, capable student. Interested in systems programming, app design, web
+                    accessibility, distributed systems and railway operations.
                 </td>
             </tr>
             <tr>
@@ -64,7 +64,10 @@
                     <ol>
                         <li>
                             <a href="https://github.com/iamawatermelo/maybe-material">Maybe Material</a>
-                            <div>2026 <span class="faint">72 vibrant, harmonious themes for Zed, built with colour science</span></div>
+                            <div>
+                                2026 <span class="faint"
+                                    >72 vibrant, harmonious themes for Zed, built with colour science</span>
+                            </div>
                         </li>
                         <li>
                             <a href="https://revolution.uppy.pet/">Revolution</a>
@@ -72,11 +75,17 @@
                         </li>
                         <li>
                             <a href="https://github.com/iamawatermelo/wakapi-anyide">wakapi-anyide</a>
-                            <div>2024 <span class="faint">Time tracking tools to help global teenagers step into programming</span></div>
+                            <div>
+                                2024 <span class="faint"
+                                    >Time tracking tools to help global teenagers step into programming</span>
+                            </div>
                         </li>
                         <li>
                             <a href="https://zenith.uppy.pet/">Zenith</a>
-                            <div>2024 <span class="faint">Space-themed website for an international teen-led coding summit</span></div>
+                            <div>
+                                2024 <span class="faint"
+                                    >Space-themed website for an international teen-led coding summit</span>
+                            </div>
                         </li>
                     </ol>
                 </td>
@@ -108,10 +117,10 @@
                 <td class="type">string</td>
                 <td>
                     Tainted:
-                    <abbr title="theriantropy">&Theta;&Delta;</abbr>
-                    <abbr title="agender">&#x26B2;</abbr>
-                    <abbr title="plural">&amp;</abbr>
-                    <abbr title="polyamorous">&pi;</abbr>
+                    <abbr title="theriantropy symbol">&Theta;&Delta;</abbr>
+                    <abbr title="agender symbol">&#x26B2;</abbr>
+                    <abbr title="plurality symbol">&amp;</abbr>
+                    <abbr title="polyamory symbol">&pi;</abbr>
                     <br />RIP: dump_stack+0x19/0x1b
                 </td>
             </tr>
@@ -137,7 +146,7 @@
                     </ol>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <th scope="row">External entities</th>
                 <td class="type">array&lt;entity&gt;</td>
                 <td>
@@ -150,7 +159,7 @@
                         </li>
                     </ol>
                 </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 
@@ -241,7 +250,9 @@
     }
 
     .term {
-        font-feature-settings: 'ss20', 'calt' off;
+        font-feature-settings:
+            'ss20',
+            'calt' off;
         column-gap: 1ch;
         opacity: 0.6;
         user-select: none;
@@ -358,7 +369,7 @@
         a {
             min-height: 1.5em;
         }
-        
+
         &:has(.faint) li:not(:last-child) {
             padding-bottom: 0.5em;
         }
