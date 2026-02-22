@@ -91,6 +91,16 @@
                 </td>
             </tr>
             <tr>
+                <th scope="row">Pronouns</th>
+                <td class="type">array&lt;string&gt;</td>
+                <td>
+                    <ol>
+                        <li>it/its</li>
+                        <li>she/her</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
                 <th scope="row">Subject type</th>
                 <td class="type">string</td>
                 <td>dog</td>
@@ -122,16 +132,6 @@
                     <abbr title="plurality symbol">&amp;</abbr>
                     <abbr title="polyamory symbol">&pi;</abbr>
                     <br />RIP: dump_stack+0x19/0x1b
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">Pronouns</th>
-                <td class="type">array&lt;string&gt;</td>
-                <td>
-                    <ol>
-                        <li>it/its</li>
-                        <li>she/her</li>
-                    </ol>
                 </td>
             </tr>
             <tr>
