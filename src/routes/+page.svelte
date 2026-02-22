@@ -139,10 +139,10 @@
                 <td class="type">array&lt;entity&gt;</td>
                 <td>
                     <ol>
-                        <li>350121 Natalie</li>
-                        <li>067008 Valerie</li>
-                        <li>390121 Willow</li>
-                        <li>777053 Ashley</li>
+                        <li>350121 Natalie <span class="aside faint">it/its</span></li>
+                        <li>067008 Valerie <span class="aside faint">she/it</span></li>
+                        <li>390121 Willow <span class="aside faint">she/they</span></li>
+                        <li>777053 Ashley <span class="aside faint">it/its</span></li>
                     </ol>
                 </td>
             </tr>
@@ -178,267 +178,31 @@
 </main>
 
 <style>
-    main {
-        margin: auto;
-        padding: 1em;
-        margin-top: 4em;
-        max-width: 48em;
-
-        @media (max-width: 32em) {
-            margin-top: 2em;
-        }
-    }
-
-    a,
-    a:visited {
-        color: var(--accent);
-        text-decoration: dotted underline;
-
-        &:not(.noarrow)::after {
-            display: inline-block;
-            text-decoration: none;
-            transition: transform 100ms;
-            padding-left: 1ch;
-            content: '->' / '';
-        }
-
-        &:hover {
-            text-decoration-style: solid;
-        }
-
-        &:hover::after {
-            transform: translateX(1ex);
-        }
-    }
-
     abbr {
         /* deliberately inaccessible */
         text-decoration: none;
     }
-
-    div {
-        margin: 0;
-    }
-
-    h1 {
-        font-family: 'Iosevka Expanded', system-ui;
-        font-feature-settings: normal;
-        margin-top: 1em;
-    }
-
-    :global(.logo) {
-        width: 4em;
-        height: 4em;
-        margin-bottom: 2em;
-
-        @media (max-width: 24em) {
-            width: 2em;
-            height: 2em;
-            margin-bottom: 1em;
-        }
-    }
-
-    @media (min-width: 64em) {
-        .prelude {
-            position: relative;
-        }
-
-        :global(.logo) {
-            position: absolute;
-            left: -6em;
-        }
-    }
-
+    
     .term {
         font-feature-settings:
             'ss20',
             'calt' off;
         column-gap: 1ch;
         opacity: 0.6;
-        user-select: none;
-
+    
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-
+    
         @media (max-width: 32em) {
             .mob-hide {
                 display: none;
             }
-
+    
             /* i'm as upset as you are that i'm using !important */
-
+    
             .mob-right {
                 grid-column: 2 / 4 !important;
                 text-align: right !important;
-            }
-        }
-    }
-
-    table {
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-columns: max-content max-content 1fr;
-        column-gap: 2em;
-
-        text-align: left;
-
-        thead,
-        tbody,
-        tr {
-            display: grid;
-            grid-template-columns: subgrid;
-            grid-column: 1 / 4;
-        }
-
-        thead {
-            color: var(--accent);
-            font-size: 0.8em;
-            text-transform: uppercase;
-
-            tr {
-                padding: 0.5em;
-
-                border-bottom: 1px dashed color-mix(in srgb, var(--accent), transparent 60%);
-            }
-        }
-
-        tbody tr {
-            padding: 0.5em;
-
-            &:not(:last-child) {
-                border-bottom: 1px dashed color-mix(in srgb, var(--color), transparent 60%);
-            }
-        }
-
-        th {
-            font-weight: normal;
-        }
-
-        .faint {
-            opacity: 0.6;
-        }
-
-        .aside {
-            display: inline-block;
-        }
-
-        .type {
-            color: var(--accent);
-            opacity: 0.8;
-        }
-    }
-
-    ol {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        counter-reset: list -1;
-
-        li {
-            display: grid;
-            grid-template-columns: subgrid;
-            grid-column: 1 / 3;
-            counter-increment: list 1;
-
-            > * {
-                grid-column: 2;
-            }
-
-            &::before {
-                grid-column: 1;
-                width: max-content;
-                opacity: 0.6;
-                content: '- ' counter(list) ':' / '';
-                padding-left: 2ch;
-                padding-right: 1ch;
-            }
-        }
-
-        &::after {
-            grid-area: 1 / 1 / 2 / 3;
-            counter-increment: list 1;
-            width: max-content;
-            opacity: 0.6;
-            content: '+ Array [' counter(list) ']' / '';
-        }
-
-        /* WCAG 2.2 SC 2.5.8 */
-        a {
-            min-height: 1.5em;
-        }
-
-        &:has(.faint) li:not(:last-child) {
-            padding-bottom: 0.5em;
-        }
-    }
-
-    .x88x31 {
-        width: 88px;
-        height: 31px;
-
-        display: block;
-        margin: auto;
-        image-rendering: pixelated;
-
-        &.dark {
-            display: none;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            &.light {
-                display: none;
-            }
-
-            &.dark {
-                display: block;
-            }
-        }
-    }
-
-    /* Small width devices: Move type underneath the term */
-
-    @media (max-width: 48em) {
-        table {
-            grid-template-columns: 1fr min-content;
-            grid-auto-flow: column;
-
-            thead,
-            tbody,
-            tr {
-                grid-column: 1 / 3;
-            }
-
-            thead tr,
-            tbody tr {
-                padding: 1em 0.5em;
-            }
-
-            thead tr > *:nth-child(1) {
-                opacity: 0.8;
-            }
-
-            tbody tr > *:nth-child(1) {
-                opacity: 0.6;
-            }
-
-            tr {
-                row-gap: 0.5em;
-
-                > *:nth-child(1) {
-                    grid-column: 1;
-                }
-
-                > *:nth-child(2) {
-                    grid-column: 2;
-                    text-align: right;
-                }
-
-                > *:nth-child(3) {
-                    grid-column: 1 / 3;
-                }
             }
         }
     }
