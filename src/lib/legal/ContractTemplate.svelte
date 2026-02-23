@@ -283,7 +283,6 @@
                 padding: 0.25em 0.5em;
                 
                 display: block;
-                width: 100%;
                 text-align: center;
                 
                 &::selection {
