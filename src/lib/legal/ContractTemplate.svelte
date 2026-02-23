@@ -208,7 +208,7 @@
             <ol>
                 <li><a href="#changes">Changes to these terms of use</a></li>
                 {#each template.extraSections as section (section.header)}
-                    <li><a href={`ext-${titleToId(section.header)}`}>{section.header}</a></li>
+                    <li><a href={`#ext-${titleToId(section.header)}`}>{section.header}</a></li>
                 {/each}
                 <li><a href="#minimum-age">Minimum age</a></li>
                 <li><a href="#liability">Limitation of liability</a></li>
