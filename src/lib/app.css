@@ -45,10 +45,13 @@ html {
     color: var(--inverse);
 }
 
-a,
-a:visited {
+a {
     color: var(--accent);
     text-decoration: dotted underline;
+    
+    &:visited {
+        color: color-mix(in srgb, var(--accent), var(--color) 50%);
+    }
 
     &:not(.noarrow)::after {
         display: inline-block;

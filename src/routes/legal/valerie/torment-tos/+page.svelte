@@ -65,7 +65,7 @@
                 dpa: 'https://cloud.google.com/terms/data-processing-addendum'
             }
         ],
-        dataRetention: 'at most 5 years from your last interaction',
+        dataRetention: 'at most 5 years from your last interaction, or one calendar month after you leave the server',
         dataStorage: 'encrypted at rest in Google Cloud',
 
         genai: true,
