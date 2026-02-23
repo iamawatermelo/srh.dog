@@ -206,4 +206,15 @@
             }
         }
     }
+    
+    @media (min-width: 64em) {
+        .prelude {
+            position: relative;
+        }
+
+        :global(.logo) {
+            position: absolute;
+            left: -6em;
+        }
+    }
 </style>
