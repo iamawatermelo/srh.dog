@@ -2,9 +2,9 @@
     import Logo from '$lib/Logo.svelte';
     import { onMount } from 'svelte';
 
-    let now = $state(new Date());
+    let now = $state<Date | undefined>();
 
-    const dateString = $derived(now.toLocaleDateString(
+    const dateString = $derived(now ? now.toLocaleDateString(
         "en-GB",
         {
             year: "numeric",
@@ -14,9 +14,10 @@
             minute: "2-digit",
             second: "2-digit"
         }
-    ));
+    ) : "");
 
     onMount(() => {
+        now = new Date();
         let currentTimeout: number;
 
         currentTimeout = setTimeout(() => {
