@@ -7,7 +7,7 @@
         what: 'the Valerie file sharing service',
         id: 'valerie/files-tos',
         providingEntity: 'Sarah Pawton',
-        lastUpdated: new Date(2026, 9, 05),
+        lastUpdated: new Date(2026, 9, 5),
         contactName: 'policy@srh.dog',
         contactUri: 'mailto:policy@srh.dog',
         changeNotifications: 'by Discord announcement',
@@ -26,7 +26,7 @@
         ],
         subprocessors: [],
         dataRetention: 'until you delete the file',
-        dataStorage: 'encrypted at rest in Google Cloud',
+        dataStorage: 'stored on-premises and not encrypted',
 
         genai: false,
         genaiTraining: false,
