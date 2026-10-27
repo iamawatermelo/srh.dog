@@ -1,10 +1,40 @@
-<script>
+<script lang="ts">
     import Logo from '$lib/Logo.svelte';
+    import { onMount } from 'svelte';
+
+    let now = $state(new Date());
+
+    const dateString = $derived(now.toLocaleDateString(
+        "en-GB",
+        {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        }
+    ));
+
+    onMount(() => {
+        let currentTimeout: number;
+
+        currentTimeout = setTimeout(() => {
+            now = new Date()
+            currentTimeout = setInterval(() => {
+                now = new Date()
+            }, 1000)
+        }, 1000 - now.getUTCMilliseconds());
+
+        return () => {
+            clearTimeout(currentTimeout);
+        }
+    })
 </script>
 
 <svelte:head>
     <title>Sarah Pawton</title>
-    <meta name="description" content="USER REPORT: 390119 SARAH PAWTON at 10:02 16/11/2024" />
+    <meta name="description" content="USER REPORT: 390119 SARAH PAWTON" />
 </svelte:head>
 
 <main>
@@ -14,13 +44,13 @@
         <div class="term">
             <div style="grid-area: 1 / 1 / 2 / 2">#AWTDASP</div>
             <div style="grid-area: 1 / 2 / 2 / 3; text-align: center;" class="mob-right">Detailed User Display</div>
-            <div style="grid-area: 1 / 3 / 2 / 4; text-align: right;" class="mob-hide">26/12/2025&nbsp;18:20</div>
+            <div style="grid-area: 1 / 3 / 2 / 4; text-align: right;" class="mob-hide">{dateString}</div>
             <div style="grid-area: 2 / 1 / 3 / 2" class="mob-hide" aria-hidden="true">==></div>
             <div style="grid-area: 2 / 2 / 3 / 4; text-align: right;" class="mob-hide">
                 All sectors; WTT times; Page&nbsp;1..&nbsp;of&nbsp;1
             </div>
             <div style="grid-area: 3 / 1 / 3 / 4" aria-hidden="true">&nbsp;</div>
-            <div style="grid-area: 4 / 1 / 5 / 4">USER REPORT: 390119 SARAH PAWTON at 10:02 16/11/2024</div>
+            <div style="grid-area: 4 / 1 / 5 / 4">USER REPORT: 390119 SARAH PAWTON at 18:05 27/10/2026</div>
         </div>
     </div>
 
@@ -51,9 +81,11 @@
                         <li>
                             <a href="https://www.linkedin.com/in/sarah-pawton/">Sarah Pawton on LinkedIn</a>
                         </li>
+                        <!--
                         <li>
                             <a href="https://github.com/iamawatermelo">iamawatermelo on GitHub</a>
                         </li>
+                        -->
                     </ol>
                 </td>
             </tr>
@@ -70,21 +102,10 @@
                             </div>
                         </li>
                         <li>
-                            <a href="https://revolution.uppy.pet/">Revolution</a>
-                            <div>2025 <span class="faint">Train-themed website for a UK teen-led hackathon</span></div>
-                        </li>
-                        <li>
                             <a href="https://github.com/iamawatermelo/wakapi-anyide">wakapi-anyide</a>
                             <div>
                                 2024 <span class="faint"
-                                    >Time tracking tools to help global teenagers step into programming</span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://zenith.uppy.pet/">Zenith</a>
-                            <div>
-                                2024 <span class="faint"
-                                    >Space-themed website for an international teen-led coding summit</span>
+                                    >Time tracking tools to help teenagers step into programming</span>
                             </div>
                         </li>
                     </ol>
@@ -139,40 +160,35 @@
                 <td class="type">array&lt;entity&gt;</td>
                 <td>
                     <ol>
-                        <li>350121 Natalie <span class="aside faint">it/its</span></li>
-                        <li>067008 Valerie <span class="aside faint">she/it</span></li>
+                        <li><span>350121 Natalie <span class="faint">(+13 names)</span></span><span class="aside faint">it/its</span></li>
                         <li>390121 Willow <span class="aside faint">she/they</span></li>
                         <li>777053 Ashley <span class="aside faint">it/its</span></li>
                     </ol>
                 </td>
             </tr>
-            <!-- <tr>
-                <th scope="row">External entities</th>
-                <td class="type">array&lt;entity&gt;</td>
-                <td>
-                    <ol>
-                        <li>
-                            <a href="https://transcental.dev/">158863 [transcental.dev]</a>
-                        </li>
-                        <li>
-                            <a href="https://prpl.wtf/">323243 [prpl.wtf]</a>
-                        </li>
-                    </ol>
-                </td>
-            </tr> -->
         </tbody>
     </table>
 
     <footer class="term">
         <div style="grid-area: 1 / 1 / 4 / 4" aria-hidden="true">&nbsp;<br /><br /><br /></div>
-        <div style="grid-area: 4 / 1 / 5 / 2" aria-hidden="true">[RO] SCR1 WCAG&nbsp;2.2&nbsp;WAI&#8209;AA</div>
+        <div style="grid-area: 4 / 1 / 5 / 2" aria-hidden="true">[RO] SCR1</div>
         <div style="grid-area: 4 / 2 / 5 / 4; text-align: right;">(c)&nbsp;Landtable Surveillance</div>
         <div style="grid-area: 5 / 1 / 6 / 4" aria-hidden="true">&nbsp;</div>
-        <div style="grid-area: 6 / 2 / 7 / 3">
+        <div style="grid-area: 6 / 1 / 7 / 4; text-align: center;">
             <a href="/embedding.txt" class="noarrow">
                 <img src="/button-dark.gif" alt="srh.dog" loading="lazy" class="x88x31 dark" />
                 <img src="/button-light.gif" alt="srh.dog" loading="lazy" class="x88x31 light" />
             </a>
+            <!--
+            <div class="buttons">
+                <a href="https://prpl.wtf/" class="noarrow">
+                    <img src={Prpl} alt="prpl.wtf" loading="lazy" class="x88x31" />
+                </a>
+                <a href="https://auri.lol/" class="noarrow">
+                    <img src={Auri} alt="auri.lol" loading="lazy" class="x88x31" />
+                </a>
+            </div>
+            -->
         </div>
     </footer>
 </main>
@@ -182,31 +198,44 @@
         /* deliberately inaccessible */
         text-decoration: none;
     }
-    
+
     .term {
         font-feature-settings:
             'ss20',
             'calt' off;
         column-gap: 1ch;
         opacity: 0.6;
-    
+
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-    
-        @media (max-width: 32em) {
+
+        @media (max-width: 38em) {
             .mob-hide {
                 display: none;
             }
-    
+
             /* i'm as upset as you are that i'm using !important */
-    
+
             .mob-right {
                 grid-column: 2 / 4 !important;
                 text-align: right !important;
             }
         }
     }
-    
+
+    .buttons {
+        padding-top: 2em;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    :global(.logo) {
+        margin-bottom: 2em;
+    }
+
     @media (min-width: 64em) {
         .prelude {
             position: relative;
@@ -215,6 +244,7 @@
         :global(.logo) {
             position: absolute;
             left: -6em;
+            transform: scale(1.5)
         }
     }
 </style>
