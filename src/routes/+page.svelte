@@ -35,7 +35,7 @@
 
 <svelte:head>
     <title>Sarah Pawton</title>
-    <meta name="description" content="USER REPORT: 390119 SARAH PAWTON" />
+    <meta name="description" content="Student interested in systems programming, app design, web accessibility, distributed systems and railway operations." />
 </svelte:head>
 
 <main>
@@ -224,6 +224,7 @@
         }
     }
 
+    /*
     .buttons {
         padding-top: 2em;
         display: flex;
@@ -232,6 +233,7 @@
         flex-wrap: wrap;
         gap: 1em;
     }
+    */
 
     :global(.logo) {
         margin-bottom: 2em;

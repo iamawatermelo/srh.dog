@@ -362,13 +362,17 @@
 
     <h3 id="dpa">Who processes my data?</h3>
 
-    <p>Your data is shared with the following subprocessors solely for the purpose of providing the service to you:</p>
-
-    <ol>
-        {#each template.subprocessors as subprocessor (subprocessor.who)}
-            <li><a href={subprocessor.dpa}>{subprocessor.who}</a></li>
-        {/each}
-    </ol>
+    {#if template.subprocessors.length !== 0}
+        <p>Your data is shared with the following subprocessors solely for the purpose of providing the service to you:</p>
+    
+        <ol>
+            {#each template.subprocessors as subprocessor (subprocessor.who)}
+                <li><a href={subprocessor.dpa}>{subprocessor.who}</a></li>
+            {/each}
+        </ol>
+    {:else}
+        <p>Your data is not shared with any subprocessors.</p>
+    {/if}
 
     <h3 id="data-storage">How is my data stored?</h3>
 
@@ -444,7 +448,7 @@
 
     <h3 id="data-contact">Who do I contact regarding my personal data?</h3>
 
-    <p>You can contact us at <a href={template.contactUri}>{template.contactName}</a></p>
+    <p>You can contact us at <a href={template.contactUri}>{template.contactName}</a>.</p>
 </main>
 
 <style>

@@ -7,12 +7,13 @@
         what: 'the Valerie file sharing service',
         id: 'valerie/files-tos',
         providingEntity: 'Sarah Pawton',
-        lastUpdated: new Date(2026, 9, 5),
+        lastUpdated: new Date(2026, 9, 28),
         contactName: 'policy@srh.dog',
         contactUri: 'mailto:policy@srh.dog',
         changeNotifications: 'by Discord announcement',
 
         minimumAge: 16,
+        extraSections: [],
 
         collectedInformation: [
             {
